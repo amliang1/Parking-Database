@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+**/node_modules/
+package-lock.json
+
+# Cache files
+.cache/
+**/.cache/
+*.cache
+
+# OS files
+.DS_Store
+**/.DS_Store
+
+# Binary files
+*.dylib
+*.so
+*.dll
+
+# Logs
+*.log
+logs/

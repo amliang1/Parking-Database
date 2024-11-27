@@ -1,0 +1,114 @@
+.statistics-widgets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.widget {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.widget:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.widget-icon {
+  background: #f8f9fa;
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.widget-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.widget.occupancy .widget-icon {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.widget.revenue .widget-icon {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.widget.duration .widget-icon {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.widget.violations .widget-icon {
+  background: #fbe9e7;
+  color: #d84315;
+}
+
+.widget-content {
+  flex: 1;
+}
+
+.widget h3 {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6c757d;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.widget-stats {
+  margin-top: 0.5rem;
+}
+
+.main-stat {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #212529;
+}
+
+.sub-stat {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .statistics-widgets {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .widget {
+    padding: 1rem;
+  }
+
+  .widget-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .widget-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .main-stat {
+    font-size: 1.25rem;
+  }
+}
